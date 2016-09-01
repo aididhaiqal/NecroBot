@@ -1,4 +1,4 @@
-﻿#region using directives
+#region using directives
 
 using System;
 using System.Threading.Tasks;
@@ -142,7 +142,7 @@ namespace PoGo.NecroBot.Logic.Common
         }
         public void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response)
         {
-            if (response.StatusCode == 3)
+            if (response.StatusCode == ResponseEnvelope.Types.StatusCode.BadRequest)
             {
                 for (int i = 0; i < request.Requests.Count; i++)
                 {
